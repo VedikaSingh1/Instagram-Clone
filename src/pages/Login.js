@@ -5,11 +5,6 @@ import gplay from "../assets/gplay.jpg";
 import microsoft from "../assets/microsoft.jpg";
 import { Link } from "react-router-dom";
 
-const phnbg1 = require("../assets/phnbg1.png");
-const phnbg2 = require("../assets/phnbg2.png");
-const phnbg3 = require("../assets/phnbg3.png");
-const phnbg4 = require("../assets/phnbg4.png");
-
 const Login = () => {
   const [bgIndex, setBgIndex] = useState(1);
 
@@ -20,60 +15,61 @@ const Login = () => {
 
     return () => clearInterval(interval);
   }, []);
+
   return (
-    <section className="flex justify-center gap-3 py-10  bg-[#fafafa]">
-      <div className="relative  ">
-        <div className=" relative  overflow-hidden">
+    <section className="flex justify-center gap-3 py-10 bg-[#fafafa]">
+      <div className="relative">
+        <div className="relative overflow-hidden">
           <img src={phone_img} alt="" />
         </div>
         <div>
           <img
-            src={eval(`phnbg${bgIndex}`)}
+            src={require(`../assets/phnbg${bgIndex}.png`)}
             alt="nothing"
             className="absolute top-[23px] right-[63px]"
           />
         </div>
       </div>
-      <div className="flex flex-col gap-2 ">
-        <div className=" border border-[#dbdbdb] bg-[#fafafa]  flex  flex-col  items-center py-6 ">
+      <div className="flex flex-col gap-2">
+        <div className="border border-[#dbdbdb] bg-[#fafafa] flex flex-col items-center py-6">
           <div>
             <img src={logo} alt="" className="w-48 cursor-pointer" />
           </div>
-          <div className=" flex flex-col px-10  gap-5  ">
-            <form className="flex flex-col gap-3  ">
-              <div class="relative z-0 w-full  group">
+          <div className="flex flex-col px-10 gap-5">
+            <form className="flex flex-col gap-3">
+              <div className="relative z-0 w-full group">
                 <input
                   type="email"
-                  className="  py-3 px-4 w-full text-[12px] bg-zinc-100 text-gray-900 border  border-gray-300 outline-none peer "
+                  className="py-3 px-4 w-full text-[12px] bg-zinc-100 text-gray-900 border border-gray-300 outline-none peer"
                 />
-                <label className="pointer-events-none absolute text-[12px] peer-focus:text-[10px] text-gray-500  duration-300 transform  top-3 left-4 peer-focus:-translate-y-2  ">
-                  Phone number, username or email
+                <label className="pointer-events-none absolute text-[12px] peer-focus:text-[10px] text-gray-500 duration-300 transform top-3 left-4 peer-focus:-translate-y-2">
+                  Phone number, username, or email
                 </label>
               </div>
 
-              <div class="relative z-0 w-full  group">
+              <div className="relative z-0 w-full group">
                 <input
                   type="password"
-                  className=" py-3 px-4 w-full text-[12px] bg-zinc-100 text-gray-900 border  border-gray-300 outline-none peer "
+                  className="py-3 px-4 w-full text-[12px] bg-zinc-100 text-gray-900 border border-gray-300 outline-none peer"
                 />
-                <label className=" pointer-events-none  absolute text-[12px] peer-focus:text-[10px] text-gray-500  duration-300 transform  top-3 left-4 peer-focus:-translate-y-2  ">
+                <label className="pointer-events-none absolute text-[12px] peer-focus:text-[10px] text-gray-500 duration-300 transform top-3 left-4 peer-focus:-translate-y-2">
                   Password
                 </label>
               </div>
 
-              <button className="bg-[#0095f6]  px-4 rounded-lg py-1.5 font-bold text-white ">
-                <Link to="/Home"> Log in</Link>
+              <button className="bg-[#0095f6] px-4 rounded-lg py-1.5 font-bold text-white">
+                <Link to="/Home">Log in</Link>
               </button>
             </form>
 
             <div className="flex flex-row items-center justify-center gap-1">
-              <span className="bg-[#dbdbdb]  rounded-full px-16 py-[1px]"></span>
+              <span className="bg-[#dbdbdb] rounded-full px-16 py-[1px]"></span>
               <div className="mx-3 text-gray-500 font-semibold text-sm">OR</div>
               <span className="bg-[#dbdbdb] px-16 rounded-full py-[1px] "></span>
             </div>
 
             <div className="self-center">
-              <button className=" flex gap-1 items-center px-2 py-1 cursor-pointer">
+              <button className="flex gap-1 items-center px-2 py-1 cursor-pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
