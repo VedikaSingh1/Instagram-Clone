@@ -45,11 +45,8 @@ const Login = () => {
                 <input
                   type="email"
                   className="  py-3 px-4 w-full text-[12px] bg-zinc-100 text-gray-900 border  border-gray-300 outline-none peer "
-            
                 />
-                <label
-                  className="pointer-events-none absolute text-[12px] peer-focus:text-[10px] text-gray-500  duration-300 transform  top-3 left-4 peer-focus:-translate-y-2  "
-                >
+                <label className="pointer-events-none absolute text-[12px] peer-focus:text-[10px] text-gray-500  duration-300 transform  top-3 left-4 peer-focus:-translate-y-2  ">
                   Phone number, username or email
                 </label>
               </div>
@@ -58,17 +55,14 @@ const Login = () => {
                 <input
                   type="password"
                   className=" py-3 px-4 w-full text-[12px] bg-zinc-100 text-gray-900 border  border-gray-300 outline-none peer "
-            
                 />
-                <label
-                  className=" pointer-events-none  absolute text-[12px] peer-focus:text-[10px] text-gray-500  duration-300 transform  top-3 left-4 peer-focus:-translate-y-2  "
-                >
+                <label className=" pointer-events-none  absolute text-[12px] peer-focus:text-[10px] text-gray-500  duration-300 transform  top-3 left-4 peer-focus:-translate-y-2  ">
                   Password
                 </label>
               </div>
 
               <button className="bg-[#0095f6]  px-4 rounded-lg py-1.5 font-bold text-white ">
-               <Link to= "/Home"> Log in</Link>
+                <Link to="/Home"> Log in</Link>
               </button>
             </form>
 
@@ -111,13 +105,23 @@ const Login = () => {
 
         <div className="flex border justify-center py-5 gap-1">
           <h3 className="text-black text-md">Don't have an account?</h3>
-          <span className="text-[#0095f6] font-semibold cursor-pointer"><Link to="/Signup">Sign up</Link></span>
+          <span className="text-[#0095f6] font-semibold cursor-pointer">
+            <Link to="/Signup">Sign up</Link>
+          </span>
         </div>
         <div className="self-center flex flex-col gap-2">
           <span className="text-center">Get the app.</span>
           <div className="flex gap-3 ">
-            <img src={gplay} alt="" className="w-36 h-11 rounded-lg cursor-pointer" />
-            <img src={microsoft} alt="" className="w-32 h-11 rounded-lg cursor-pointer" />
+            <img
+              src={gplay}
+              alt=""
+              className="w-36 h-11 rounded-lg cursor-pointer"
+            />
+            <img
+              src={microsoft}
+              alt=""
+              className="w-32 h-11 rounded-lg cursor-pointer"
+            />
           </div>
         </div>
       </div>
