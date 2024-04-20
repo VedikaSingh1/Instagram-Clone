@@ -1,8 +1,7 @@
-import React from 'react'
-import phnbg from "../assets/phnbg1.png"
-import InstagramPost from './InstagramPost'
-import postimg from "../assets/Postimg.jpeg"
-import postimg2 from "../assets/post2.jpeg"
+import React from "react";
+import InstagramPost from "./InstagramPost";
+import postimg from "../assets/Postimg.jpeg";
+import postimg2 from "../assets/post2.jpeg";
 
 const PostSection = () => {
   return (
@@ -29,7 +28,7 @@ const PostSection = () => {
         comments={20}
       />
     </div>
-  )
-}
+  );
+};
 
-export default PostSection
+export default PostSection;
